@@ -115,7 +115,7 @@ class linkedList {
     if (value.nextNode == null) {
       return `${value.value}`;
     } else {
-      let recursive = this.toStringr(value.nextNode);
+      let recursive = this.toString(value.nextNode);
       return `${value.value} -> ${recursive}`;
     }
   }
