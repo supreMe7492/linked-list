@@ -110,14 +110,14 @@ class linkedList {
 
     return index;
   }
-  toString() {
-    let current = this.head;
-    let values = [];
-    while (current != null) {
-      values.push(current.value);
-      current = current.nextNode;
+
+  toString(value = this.head) {
+    if (value.nextNode == null) {
+      return `${value.value}`;
+    } else {
+      let recursive = this.toStringr(value.nextNode);
+      return `${value.value} -> ${recursive}`;
     }
-    return ` ${values.join(" -> ")} -> null`;
   }
 }
 
